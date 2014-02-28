@@ -11,17 +11,17 @@ using GarrysMod.Lua.Interface;
 
 namespace gmsv_webserv
 {
-    public static class WebServ
+    public static unsafe class WebServ
     {
         [DllExport("gmod13_open", CallingConvention = CallingConvention.Cdecl)]
         static int ModuleOpen(lua_State state)
         {
-            ILuaBase LUA = state.luabase;
+            /*ILuaBase LUA = state.luabase;
 
             LUA.PushSpecial(Special.SPECIAL_GLOB);
                 LUA.PushCFunction(HelloWorld);
                 LUA.SetField(-2, "HelloWorld");
-            LUA.Pop();
+            LUA.Pop();*/
 
             return 0;
         }
